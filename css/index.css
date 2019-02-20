@@ -107,10 +107,6 @@ section {
 body {
   line-height: 1;
 }
-ol,
-ul {
-  list-style: none;
-}
 blockquote,
 q {
   quotes: none;
@@ -141,13 +137,9 @@ body {
   flex-direction: column;
   align-content: center;
   background-color: lightgrey;
-}
-.my-image {
-  width: 400px;
-  height: 400px;
-  margin: 20px 0px 20px 0px;
-  padding: 40px;
-  border-radius: 20px;
+  -webkit-box-shadow: -1px 10px 103px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 10px 103px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 10px 103px -6px rgba(0, 0, 0, 0.75);
 }
 nav {
   display: flex;
@@ -163,8 +155,60 @@ nav a {
   font-family: "Roboto", sans-serif;
   padding: 10px;
 }
+.my-image {
+  width: 400px;
+  height: 400px;
+  margin: 50px 0px 30px 50px;
+  border-radius: 360px;
+  -webkit-box-shadow: 4px 5px 120px -23px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 5px 120px -23px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 5px 120px -23px rgba(0, 0, 0, 0.75);
+}
+h1 {
+  font-size: 3.4rem;
+  font-family: 'Roboto', sans-serif;
+  margin: 0px 0px 10px 30px;
+}
+#top p {
+  font-family: 'Roboto', sans-serif;
+  margin: 20px 0px 10px 40px;
+}
 button {
-  margin: 30px 0px 30px 0px;
+  margin: 30px 0px 30px 40px;
   padding: 10px;
   width: 150px;
+  background-color: lightgrey;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+#middle {
+  display: flex;
+  background-color: white;
+}
+.container-1 {
+  padding: 30px;
+  width: 45%;
+}
+.container-2 {
+  height: 45%;
+  padding: 30px;
+}
+.container-2 p {
+  margin-left: 25px;
+  border: 1px solid lightgrey;
+  padding: 20px;
+}
+#bottom {
+  background-color: white;
+}
+#bottom .head {
+  margin: 20px 0px 20px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+footer {
+  text-align: center;
+  color: white;
+  background-color: grey;
+  padding: 30px;
 }
