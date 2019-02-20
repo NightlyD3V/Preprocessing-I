@@ -4,6 +4,19 @@
 @white: white;
 //FONTS
 @Roboto: 'Roboto', sans-serif;
+@RobotoMono: 'Roboto Mono', monospace;
+@Amatic: 'Amatic SC', cursive;
+
+
+//VARIABLES
+@borders: 1px solid black;
+@bordersY: 1px 0px 1px 0px solid black;
+//MIXINS
+.row-flex {
+	display: flex;
+	justify-content: space-around;
+	padding: 10px;
+}
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -89,10 +102,13 @@ nav {
 		font-family: "Roboto" , sans-serif; 
 		padding: 10px;
 	}
+	a:hover {
+		color: darkgrey;
+	}
 }
 .my-image {
-	width: 400px;
-	height: 400px;
+	width: 35%;
+	height: 35%;
 	margin: 50px 0px 30px 50px;
 	border-radius: 360px;
 	//box-shadow
@@ -101,50 +117,102 @@ nav {
 	box-shadow: 4px 5px 120px -23px rgba(0,0,0,0.75);
 }
 h1 {
-	font-size: 3.4rem;
+	font-size: 2.5rem;
 	font-family: @Roboto;
 	margin: 0px 0px 10px 30px;;
 }
+h2 {
+	font-size: 2.0rem;
+	font-family: @RobotoMono;
+	margin: 0px 0px 10px 30px;
+}
 #top p {
-	font-family: @Roboto;
+	font-family: @Amatic;
+	font-size: 2rem;
 	margin: 20px 0px 10px 40px;
 }
 button {
 	margin: 30px 0px 30px 40px;
-	padding: 10px;
-	width: 150px;
-	background-color: lightgrey;
+	padding: 15px;
+	width: 160px;
+	font-family: @Roboto;
+	font-size: 1.2rem;
+	color: white;
+	background-color: grey;
 	border: 1px solid black;
 	border-radius: 10px;
+}
+button:hover {
+	background-color: darkgrey;
 }
 #middle {
 	display: flex;
 	background-color: @white;
-}
-.container-1 {
-	padding: 30px;
-	width: 45%;
-}
-.container-2 {
-	height: 45%;
-	padding: 30px;
-	p {
-		margin-left: 25px;
-		border: 1px solid lightgrey;
-		padding: 20px;
+	.container-1 {
+		padding: 30px;
+		width: 49%;
+		h2{
+			margin: 0px 0px 10px 0px;
+		}
+		p{
+			font-family: @Roboto;
+			font-size: 1.2rem;
+		}
+	}
+	.container-2 {
+		height: 45%;
+		padding: 30px;
+		h2{
+			margin-bottom: 10px;
+		}
+		p {
+			font-family: @Roboto;
+			margin-left: 25px;
+			border: 1px solid lightgrey;
+			padding: 20px;
+		}
+	}
+	@media(max-width: 900px) {
+		flex-direction: column;
+		.container-1{
+			width: 100%
+		}
+		p {
+			margin-left: 25px;
+			padding: 20px;
+		}
 	}
 }
 #bottom {
 	background-color: @white;
 	.head {
-		margin: 20px 0px 20px 0px;
-		display: flex;
-		justify-content: space-around;
+		margin: 20px 0px 0px 0px;
+		.row-flex();
+		padding: 10px;
+	}
+	.head > p {
+		font-family: @Roboto;
+		font-size: 1rem;
+	}
+	.row-1 {
+		.row-flex();
+		background-color: bisque;
+	}
+	.row-1 > p {
+		font-family: @Roboto;
+		font-size: 1rem;
+	}
+	.row-2 {
+		.row-flex();
+	}
+	.row-2 > p {
+		font-family: @Roboto;
 	}
 }
 footer {
 	text-align: center;
 	color: @white;
 	background-color: @footer;
+	font-family: @Roboto;
 	padding: 30px;
 }
