@@ -6,14 +6,13 @@
 @Roboto: 'Roboto', sans-serif;
 @RobotoMono: 'Roboto Mono', monospace;
 @Amatic: 'Amatic SC', cursive;
-
-
 //VARIABLES
 @borders: 1px solid black;
 @bordersY: 1px 0px 1px 0px solid black;
 //MIXINS
 .row-flex {
 	display: flex;
+	justify-content: flex-start;
 	justify-content: space-around;
 	padding: 10px;
 }
@@ -129,18 +128,20 @@ h2 {
 #top p {
 	font-family: @Amatic;
 	font-size: 2rem;
+	padding: 10px;
+	background-color: lightcyan;
 	margin: 20px 0px 10px 40px;
 }
 button {
 	margin: 30px 0px 30px 40px;
-	padding: 15px;
-	width: 160px;
+	padding: 10px;
+	width: 200px;
 	font-family: @Roboto;
 	font-size: 1.2rem;
 	color: white;
-	background-color: grey;
+	background-color: black;
 	border: 1px solid black;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 button:hover {
 	background-color: darkgrey;
@@ -158,18 +159,27 @@ button:hover {
 			font-family: @Roboto;
 			font-size: 1.2rem;
 		}
+		@media(max-width: 900px){
+			h2 {
+				margin: 0px 0px 10px 40px;
+			}
+		}
 	}
 	.container-2 {
 		height: 45%;
 		padding: 30px;
 		h2{
 			margin-bottom: 10px;
+			padding-right: 40px;
 		}
 		p {
 			font-family: @Roboto;
 			margin-left: 25px;
 			border: 1px solid lightgrey;
 			padding: 20px;
+		}
+		p:last-child{
+			border-radius: 0px 0px 10px 10px;
 		}
 	}
 	@media(max-width: 900px) {
@@ -185,10 +195,16 @@ button:hover {
 }
 #bottom {
 	background-color: @white;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	.row-flex();
 	.head {
-		margin: 20px 0px 0px 0px;
+		margin: 20px 0px 0px -50px;
 		.row-flex();
-		padding: 10px;
+		@media(max-width: 500px) {
+			margin: 20px 0px 0px 0px;
+		}
 	}
 	.head > p {
 		font-family: @Roboto;
@@ -196,9 +212,11 @@ button:hover {
 	}
 	.row-1 {
 		.row-flex();
+		width: 100%;
 		background-color: bisque;
 	}
 	.row-1 > p {
+		width: 100%;
 		font-family: @Roboto;
 		font-size: 1rem;
 	}
@@ -206,6 +224,8 @@ button:hover {
 		.row-flex();
 	}
 	.row-2 > p {
+		width: 100%;
+		margin: 5px;
 		font-family: @Roboto;
 	}
 }
@@ -213,6 +233,6 @@ footer {
 	text-align: center;
 	color: @white;
 	background-color: @footer;
-	font-family: @Roboto;
+	font-family: @RobotoMono;
 	padding: 30px;
 }
