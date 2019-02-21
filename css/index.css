@@ -187,7 +187,6 @@ h2 {
   font-family: 'Amatic SC', cursive;
   font-size: 2rem;
   padding: 10px;
-  background-color: lightcyan;
   margin: 20px 0px 10px 40px;
 }
 button {
@@ -222,6 +221,9 @@ button:hover {
 @media (max-width: 900px) {
   #middle .container-1 h2 {
     margin: 0px 0px 10px 40px;
+  }
+  #middle .container-1 p {
+    padding: 10px;
   }
 }
 #middle .container-2 {
