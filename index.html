@@ -3,10 +3,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
+  <!--Responsiveness-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
+  <!--GOOGLE FONTS-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -14,6 +19,83 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+    <div class="master-container">
+        <div class="nav-container">
+          <nav>
+            <a href="index.html">Home</a>
+            <a href="#middle">About</a>
+            <a href="https://nightlyd3v.github.io/portfolio-website/?fbclid=IwAR34i0RWMLFXOUaxh6awDa07NsHmeX4_GJd88V-h2IYbTXamjRVbWISKC90">Portfolio</a>
+            <a href="https://nightlyd3v.github.io/portfolio-website/?fbclid=IwAR34i0RWMLFXOUaxh6awDa07NsHmeX4_GJd88V-h2IYbTXamjRVbWISKC90#three">Contact</a>
+          </nav>
+        </div>
+        
+      </section>
+      <!-- TOP -->
+      <section id="top">
+          <hr>
+          <img class="my-image" src="img/profile-img.jpg">
+          <h1>Tyler Spaulding - Web Developer</h1>
+          <p>Technology is my jam!</p>
+          <hr>
+          <p>Occasionally I have time to work on side projects, if you're interested, let me 
+            know by getting in touch!
+          </p>
+          <a href="https://nightlyd3v.github.io/portfolio-website/?fbclid=IwAR34i0RWMLFXOUaxh6awDa07NsHmeX4_GJd88V-h2IYbTXamjRVbWISKC90#three">
+            <button>Let's Team Up!</button>
+          </a>
+          <hr>
+      </section>
+      <!-- MIDDLE -->
+      <section id="middle">
+        <div class="container-1">
+          <h2>Listen Up...</h2>
+          <p>
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+               exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+               irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+               pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+               deserunt mollit anim id est laborum."
+          </p>
+        </div>
+        <div class="container-2">
+            <h2>Stuff I'm Good At</h2>
+              <p>HTML5</p>
+              <p>CSS3</p>
+              <p>LESS</p>
+              <p>GIT</p>
+          </div>
+      </section>
+      <!-- BOTTOM -->
+      <section id="bottom">
+        <div class="work-history">
+          <h2>Work History</h2>
+          <div class="head">
+            <strong><p>Time</p></strong>
+            <p>Company</p>
+            <p>Title</p>
+            <p>Tech Used</p>
+          </div>
+          <hr>
+          <div class="row-1">
+            <p>Current</p>
+            <p>Lambda School</p>
+            <p>Student</p>
+            <p>HTML, CSS, LESS</p>
+          </div>
+          <hr>
+          <div class="row-2">
+            <p>9 Months</p>
+            <p>Omni Baking</p>
+            <p>Mechanic</p>
+            <p>Engineering</p>
+          </div>
+          <hr>
+        </div>
+      </section>
+      <footer>
+        <p>&copy 2019 Tyler Spaulding</p>
+      </footer>
+    </div>
 </body>
 </html>
